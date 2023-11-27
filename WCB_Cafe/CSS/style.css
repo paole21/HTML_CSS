@@ -11,7 +11,7 @@ body {
     color: #432;
 }
 a {
-    text-decoration: none;
+    text-decoration: none;  /*下線や打ち消し線を指定*/
 }
 img {
     max-width: 100%;
@@ -19,7 +19,33 @@ img {
 
 /* HEADER
 -------------------------------------- */
+.page-header {
+    display:flex;
+    justify-content: space-between;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;  /*ボックスを中央に配置*/
+    padding: 0 4%;  /*スマートフォン向け余白の指定*/
+}
 .logo {
     width: 210px;
     margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;  /*大文字指定*/
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: #432;
+}
+.main-nav a:hover {  /*カーソルを当てた時の装飾を指定*/
+    color: #0bd;
 }
