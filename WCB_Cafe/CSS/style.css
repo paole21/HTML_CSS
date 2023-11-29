@@ -7,6 +7,7 @@ html {
 }
 body {
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    /*本文の書体を左から順に適用していく*/
     line-height: 1.7;
     color: #432;
 }
@@ -14,13 +15,13 @@ a {
     text-decoration: none;  /*下線や打ち消し線を指定*/
 }
 img {
-    max-width: 100%;
+    max-width: 100%; /*画像を原寸大で表示*/
 }
 
 /* HEADER
 -------------------------------------- */
 .page-header {
-    display:flex;
+    display:flex; /*ヘッダー全てを横並びに指定*/
     justify-content: space-between;
 }
 .wrapper {
@@ -34,7 +35,7 @@ img {
 }
 
 .main-nav {
-    display: flex;
+    display: flex; /*ナビゲーションメニューも横並びに指定*/
     font-size: 1.25rem;
     text-transform: uppercase;  /*大文字指定*/
     margin-top: 34px;
@@ -48,4 +49,50 @@ img {
 }
 .main-nav a:hover {  /*カーソルを当てた時の装飾を指定*/
     color: #0bd;
+}
+
+/* BODY - HOME
+-------------------------------------- */
+.home-content {
+    text-align: center; /*.wrapperクラスで定義したボックスを流用し、内側のインライン要素を中央揃えに指定する。*/
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+/* HOME - 見出し
+-------------------------------------- */
+.page-title {
+    font-size: 5rem;
+    font-family: 'Philosopher', serif;
+    text-transform: uppercase;
+    font-weight: normal; /*文字の太さを指定。*/
+}
+/* HOME - ボタン
+-------------------------------------- */
+.button {
+    font-size: 1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px; /*要素の角を角丸に指定。*/
+    padding: 18px 32px; /*内側の余白を左右それぞれ指定（ボタン状にしている）。*/
+}
+.button:hover {
+    background: #0090aa; /*カーソルを当てた時の挙動。
+    インライン要素の指定は行っていないので、ボックス側の装飾（色）のみが変化する。*/
+}
+
+/* 背景画像
+-------------------------------------- */
+.big-bg { /*クラスに指定し、他ページで使いまわせるようにする。*/
+    background-size: cover; /*背景画像を比率を保ったまま、画面いっぱいに*/
+    background-position: center top; /*横方向は中央に、縦方向は上寄せに指定*/
+}
+#home {
+    background-image: url(../images/main-bg.jpg);
+    min-height: 100vh; /*ビューポート（見ている画面の大きさ）に対して、比率を指定。*/
+}
+#home .page-title {
+    text-transform: none; /*上流の"home"id側で、文字の変換を行わない設定に指定。*/
 }
