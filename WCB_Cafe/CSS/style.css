@@ -96,3 +96,11 @@ img {
 #home .page-title {
     text-transform: none; /*上流の"home"id側で、文字の変換を行わない設定に指定。*/
 }
+#news {
+    background-image: url(../images/news-bg.jpg);
+    height: 270px;
+    margin-bottom: 40px;
+}
+#news .page-title {
+    text-align: center;
+}
