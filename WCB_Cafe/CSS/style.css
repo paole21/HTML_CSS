@@ -18,7 +18,7 @@ img {
     max-width: 100%; /*画像を原寸大で表示*/
 }
 
-/* HEADER
+/* BODY - HEADER
 -------------------------------------- */
 .page-header {
     display:flex; /*ヘッダー全てを横並びに指定*/
@@ -61,7 +61,7 @@ img {
     font-size: 1.125rem;
     margin: 10px 0 42px;
 }
-/* HOME - 見出し
+/* BODY - HOME - 見出し
 -------------------------------------- */
 .page-title {
     font-size: 5rem;
@@ -69,7 +69,7 @@ img {
     text-transform: uppercase;
     font-weight: normal; /*文字の太さを指定。*/
 }
-/* HOME - ボタン
+/* BODY - HOME - ボタン
 -------------------------------------- */
 .button {
     font-size: 1.375rem;
@@ -103,4 +103,16 @@ img {
 }
 #news .page-title {
     text-align: center;
+}
+
+/* フッター
+-------------------------------------- */
+footer {
+    background: #432;
+    text-align: center;
+    padding: 26px 0;
+}
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
 }
